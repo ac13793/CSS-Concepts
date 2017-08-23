@@ -4,6 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <style>
+        /* Through CSS, there is no way to select a preceding child element. However, there is a way to select succeeding child elements */
         .rating {
             unicode-bidi: bidi-override;
             direction: rtl;
@@ -19,11 +20,11 @@
 
         .rating>span:hover,
         .rating>span:hover~span {
-            color: transparent;
+            color: transparent; /* Making color transparent to that it will not overlap with solid star*/
         }
 
         .rating>span:hover:before,
-        .rating>span:hover~span:before {
+        .rating>span:hover~span:before { /* Select all the span elements that are preceded by hovered span element*/
             content: "\2605";
             position: absolute;
             left: 0;
