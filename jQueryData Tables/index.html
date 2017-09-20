@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,19 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- <link rel="stylesheet" href="css/datatables.css"> -->
     <link rel="stylesheet" href="css/dataTables.bootstrap.css">
+    <style>
+        /* Style to highlight searched text*/
+        table.dataTable span.highlight {
+            background-color: #FFFF88;
+            border-radius: 0.28571429rem;
+        }
+
+        table.dataTable span.column_highlight {
+            background-color: #ffcc99;
+            border-radius: 0.28571429rem;
+        }
+        /* / Style to highlight searched text*/
+    </style>
 </head>
 <body>
     <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
@@ -36,6 +50,8 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/datatables.js"></script>
     <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/jquery.highlight.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
