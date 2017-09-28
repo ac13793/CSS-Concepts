@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <style>
         .toolTipContent {
             position: relative;
@@ -11,16 +12,17 @@
 
         .toolTipContent .tooltiptext {
             visibility: hidden;
-            width: 120px;
-            background-color: black;
-            color: #fff;
+            width: 200px;
+            background-color: #fff;
+            color: #000;
             text-align: center;
             border-radius: 6px;
             padding: 5px 0;
             position: absolute;
             z-index: 1;
-            top: -5px;
+            
             right: 110%;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .toolTipContent .tooltiptext::after {
@@ -31,7 +33,7 @@
             margin-top: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: transparent transparent transparent black;
+            border-color: transparent transparent transparent #fff;
         }
 
         .toolTipContent:hover .tooltiptext {
@@ -45,9 +47,22 @@
     <h2>Left Tooltip w/ Right Arrow</h2>
 
     <div class="toolTipContent">Hover over me
-        <span class="tooltiptext">Tooltip text</span>
+        <span class="tooltiptext">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</span>
     </div>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		/**
+		 * Function to position tooltip box
+		 */
+		$(".toolTipContent").on("mouseover click", function(){
+			"use strict";
+			var iCurrentTop = $(this).find(".tooltiptext").height();
+			//alert(iCurrentTop);
+			if(iCurrentTop) {
+				$(this).find(".tooltiptext").css("top", - (iCurrentTop/2) + 5);
+			}
+		});
+	</script>
 </body>
 
 </html>
