@@ -1,0 +1,28 @@
+#inputBoxDropdown .dropdown-menu {
+    max-height: 200px;
+    overflow: auto;
+}
+
+#inputBoxDropdown input:focus+.dropdown-menu {
+    display: block;
+}
+
+#inputBoxDropdown .dropdown-menu,
+#inputBoxDropdown .dropdown-menu>li>a {
+    width: 100%;
+}
+
+#inputBoxDropdown .dropdown-menu>li>a,
+.dropdown-menu>li>a:focus {
+    text-decoration: none;
+}
+
+#inputBoxDropdown .dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    color: #262626;
+    background-color: #f5f5f5;
+}
+
+#inputBoxDropdown input:focus+small+.dropdown-menu {
+    display: block;
+}
