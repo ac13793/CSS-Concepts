@@ -9,9 +9,9 @@ $("body").on("focusout", '#inputBoxDropdown input', function () {
     $(this).next("small.error").addClass("hidden");
     var value = $(this).val(),
         numRegex = /^\d+$/;
-    if ($(this).hasClass("four-digit")) {
-        classname = "four-digit";
-        if (value && (!(value.length === 4) || !(numRegex.test(value)))) {
+    if ($(this).hasClass("two-digit")) {
+        classname = "two-digit";
+        if (value && (!(value.length === 2) || !(numRegex.test(value)))) {
             $(this).closest('div').children("small." + classname + "-error").removeClass("hidden");
         } else {
             $(this).closest('div').children("small." + classname + "-error").addClass("hidden");
